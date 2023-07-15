@@ -272,11 +272,11 @@ body {
   height: 100%;
   z-index: 200;
   overflow-y: auto;
-  overflow: initial;
   transition: transform .3s linear;
   background: #ffffff;
 
   @include media('min', $tablet) {
+    overflow: visible;
     transform: translateX(0);
     position: relative;
     top: 0;
