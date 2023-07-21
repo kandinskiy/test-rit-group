@@ -434,7 +434,11 @@ body {
   background: url("/images/bg-form-search.jpg") 50% 50% no-repeat;
   background-size: cover;
   margin: rem(-64) 0 0;
-  padding: rem(248) 0 rem(48);
+  padding: rem(160) 0 rem(32);
+
+  @include media('min', $tablet) {
+    padding: rem(248) 0 rem(48);
+  }
 
   &:before {
     content: '';
