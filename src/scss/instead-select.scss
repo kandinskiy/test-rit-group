@@ -1,0 +1,60 @@
+.instead-select {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: rem(10);
+    transform: translateY(-50%);
+    width: rem(16);
+    height: rem(16);
+    mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' fill='none'%3E%3Cpath stroke='%23BABFC9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m4.5 6 4 4 4-4'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    background: #96A1AB;
+    transition: transform .3s linear;
+  }
+
+  &__input {
+    position: relative;
+    z-index: 1;
+    padding-right: rem(24);
+  }
+
+  &__input:focus ~ &:after {
+    transform: rotate(180deg);
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: rem(100);
+    border: 1px solid #DEE3E6 {
+      radius: rem(4);
+    };
+    background: #ffffff;
+  }
+
+  &__option {
+    padding: rem(12) rem(24);
+    @include scrollbar-design;
+    cursor: pointer;
+
+    &:hover {
+      background: #f3f4f6;
+    }
+
+    &.is-active {
+      background: #FFF2E9;
+
+      &:hover {
+        background: #FFE5D3;
+      }
+    }
+
+    & + & {
+      border-top: 1px solid #DEE3E6;
+    }
+  }
+}

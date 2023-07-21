@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Верстка главной страницы eqipe.ru</title>
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="/css/normalize.css" rel="stylesheet">
 </head>
 <body>
 
@@ -33,7 +33,7 @@
           </a>
         </div>
 
-        <div class="header__post-ad">
+        <div class="header__post-add">
           <button class="header__button button button_brown">Разместить объявление<span class="button__icon icon-white icon-down"></span></button>
           <div class="header__drop-down drop-down drop-down_right">
             <a href="" class="drop-down__link" title="Разместить технику в аренду">
@@ -104,9 +104,53 @@
 
   <div class="form-search">
     <div class="form-search__inner">
-      <div class="form-search__block">
-        Форма
+
+      <div class="filter">
+
+        <div class="form-cell">
+          <div class="form-cell__name">Объявления</div>
+          <div class="form-cell__element">
+            <select name="select-type" class="select">
+              <option value="value-1" selected>Техника в аренду</option>
+              <option value="value-2">Заявки на технику</option>
+            </select>
+            <div class="instead-select">
+              <input type="text" class="input" readonly>
+              <div class="instead-select__options">
+                <div class="instead-select__option">
+                  Техника в аренду
+                </div>
+                <div class="instead-select__option">
+                  Заявки на технику
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-cell">
+          <div class="form-cell__name">&nbsp;</div>
+          <div class="form-cell__element">
+            <select name="select-type" class="select">
+              <option value="value-1" selected>Техника в аренду</option>
+              <option value="value-2">Заявки на технику</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-cell">
+          <div class="form-cell__name">Город</div>
+          <div class="form-cell__element">
+            <select name="select-type" class="select">
+              <option value="" selected>Выберите город</option>
+              <option value="value-1">Волгоград <small>Россия, Волгоградская обл.</small></option>
+              <option value="value-2">Москва</option>
+            </select>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 

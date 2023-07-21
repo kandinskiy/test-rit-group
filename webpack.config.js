@@ -19,6 +19,7 @@ module.exports = {
   entry: PATHS.src + 'index.js', // path.join(__dirname, 'src', 'index.js'),
   output: {
     path: PATHS.dist,
+    publicPath: '/',
     filename: 'js/[name].js',
     clean: true,
   },
@@ -30,7 +31,6 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
       },
       {
         test: /\.(css|scss)$/,
@@ -95,9 +95,9 @@ module.exports = {
         }
       }
     },
-    runtimeChunk: true,
-    usedExports: true,
-    concatenateModules: true,
+    // runtimeChunk: true,
+    // usedExports: true,
+    // concatenateModules: true
   },
   plugins: [
     new MiniCssExtractPlugin({
