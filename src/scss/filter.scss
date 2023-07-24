@@ -1,3 +1,38 @@
+.form-search {
+  position: relative;
+  z-index: 5;
+  background: url("/images/bg-main-mobile.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  margin: rem(-64) 0 0;
+  padding: rem(160) 0 rem(32);
+
+  @include media('min', $tablet) {
+    padding: rem(248) 0 rem(48);
+    background-image: url("/images/bg-main-tablet.jpg");
+  }
+
+  @include media('min', $desktop) {
+    background-image: url("/images/bg-main-desktop.jpg");
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(0,0,0,.4);
+  }
+
+  &__inner {
+    @include inner;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .filter {
   padding: rem(24);
   border-radius: rem(4);
@@ -8,5 +43,4 @@
     "cell-1 cell-2 cell-3" auto
     "cell-4 cell-4 cell-5" auto
     /1fr 1fr 2fr;
-
 }

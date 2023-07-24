@@ -1,9 +1,14 @@
-@import 'vars';
-@import 'mixins';
-@import 'mixins-elements';
+@import "vars";
+@import "mixins";
+@import "mixins-elements";
 
-@import 'icons'; // Общие стили
-@import 'main'; // Общие стили
+@import "icons"; // Иконки
+@import "main"; // Общие стили
+@import "header"; // Шапка сайта
+@import "nav"; // Верхнее меню
+@import "footer"; // Футер
+
 @import "form"; // Элементы формы
 @import "instead-select"; // Блок вместо select
 @import "filter"; // Фильтр
+
