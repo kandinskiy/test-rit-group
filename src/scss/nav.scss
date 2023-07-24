@@ -67,7 +67,7 @@
     }
   }
 
-  &__post-ad {
+  &__post-add {
     position: relative;
     z-index: 2;
     margin-top: rem(20);
@@ -83,7 +83,7 @@
     display: flex;
   }
 
-  &__post-ad:hover &__drop-down, &__drop-down:hover {
+  &__post-add:hover &__drop-down, &__drop-down:hover {
     opacity: 1;
     max-height: rem(500);
     transition: opacity .3s linear 0s,max-height 0s linear 0s;
@@ -133,7 +133,7 @@
   }
 
   &__link.is-active {
-    color: $colorLinks;
+    color: $colorActive;
 
     @include media('min', $tablet) {
       background: #ffffff;

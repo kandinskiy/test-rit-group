@@ -36,6 +36,10 @@ body {
   line-height: 1.15;
 }
 
+section, aside, header, footer, nav {
+  display: block;
+}
+
 ul, ol {
   margin: 0;
   padding: 0;

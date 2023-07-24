@@ -151,7 +151,7 @@
   transform: translateX(-50%);
   width: 100%;
   border: 1px solid #dee3e6;
-  border-top: 2px solid $colorLinks;
+  border-top: 2px solid $colorActive;
   background: #ffffff;
 
   @include media('min', $tablet) {
@@ -176,7 +176,7 @@
     transition: color .3s linear;
 
     &:hover {
-      color: $colorLinks;
+      color: $colorActive;
     }
 
     & + & {

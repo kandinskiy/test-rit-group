@@ -30,12 +30,20 @@
   &__top {
     position: relative;
     z-index: 2;
-    padding: rem(40) rem(24) 0;
-    display: grid;
+    display: flex;
     gap: rem(24);
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: column;
+    padding: rem(40) rem(24);
+
+    @include media('min', $tablet) {
+      display: grid;
+      gap: rem(32);
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include media('min', $desktop) {
+      gap: rem(24);
+      grid-template-columns: repeat(4, 1fr);
       padding: rem(40) 0;
     }
   }
@@ -49,6 +57,21 @@
   display: flex;
   flex-direction: column;
   gap: rem(16);
+  align-items: center;
+  text-align: center;
+
+  @include media('min', $tablet) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  @include media('min', $desktop) {
+    grid-row: 1/-1;
+    grid-column: 1/2;
+  }
 
   &__logo {
     width: rem(242);
@@ -61,7 +84,14 @@
   }
 
   &__text {
+    padding: rem(24) rem(24) 0;
+    border-top: 1px solid #959595;
     font-size: rem(14);
+
+    @include media('min', $tablet) {
+      padding: 0;
+      border: none;
+    }
   }
 
   &__link {
@@ -76,28 +106,30 @@
     font-family: $fontBold;
     font-size: rem(16);
     color: #ffffff;
+    text-decoration: underline;
     transition: color .3s linear;
   }
 
   &__icon {
-    background: #ffffff;
+    background: $colorActive;
     width: rem(16);
     height: rem(16);
     transition: background .3s linear;
   }
 
   &__link:hover &__link-anchor {
-    color: $colorLinks;
-  }
-
-  &__link:hover &__icon {
-    background: $colorLinks;
+    color: $colorActive;
   }
 }
 
 .footer-links {
-  position: relative;
-  font-size: rem(14);
+  display: none;
+
+  @include media('min', $tablet) {
+    display: block;
+    position: relative;
+    font-size: rem(14);
+  }
 
   &__title {
     display: block;
@@ -108,7 +140,7 @@
     transition: color .3s linear;
 
     &:hover {
-      color: $colorLinks;
+      color: $colorActive;
     }
   }
 
@@ -124,7 +156,7 @@
     transition: color .3s linear;
 
     &:hover, &.is-active {
-      color: $colorLinks;
+      color: $colorActive;
     }
   }
 
@@ -146,16 +178,35 @@
     }
 
     &:hover {
-      color: $colorLinks;
+      color: $colorActive;
     }
   }
 }
 
 .footer-menu {
+  order: -1;
   position: relative;
   display: flex;
   gap: rem(24);
   flex-direction: column;
+  align-items: center;
+  padding-bottom: rem(24);
+  border-bottom: 1px solid #959595;
+
+  @include media('min', $tablet) {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    border: none;
+  }
+
+  @include media('min', $desktop) {
+    grid-row: 1/-1;
+    grid-column: 4/-1;
+    flex-direction: column;
+  }
 
   &__link {
     font: rem(16)/1 $fontBold;
@@ -164,16 +215,61 @@
     transition: color .3s linear;
 
     &:hover, &.is-active {
-      color: $colorLinks;
+      color: $colorActive;
     }
   }
 }
 
-.footer__bottom {
+.footer-bottom {
   position: relative;
   z-index: 2;
-  height: rem(78);
-  background: url("/images/bg-footer-desktop.jpg") no-repeat {
+  padding: rem(24) 0;
+  background: url("/images/bg-footer-mobile.jpg") no-repeat {
     size: cover;
   };
+
+  @include media('min', $tablet) {
+    background-image: url("/images/bg-footer-desktop.jpg")
+  }
+
+  &__inner {
+    @include inner;
+    display: flex;
+    gap: rem(32);
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+
+    @include media('min', $tablet) {
+      gap: rem(16);
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__about {
+    flex: 0 1 max-content;
+    font-size: rem(12);
+  }
+
+  &__agreement {
+    flex: 0 1 max-content;
+    align-self: center;
+  }
+
+  &__agreement-link {
+    flex: 0 1 max-content;
+    font-size: rem(16);
+    transition: color .3s linear;
+
+    &:hover {
+      color: $colorActive;
+    }
+  }
+
+  &__copyright {
+    font-size: rem(14);
+  }
 }

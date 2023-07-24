@@ -33,7 +33,7 @@
   }
 }
 
-.filter {
+.top-filter {
   padding: rem(24);
   border-radius: rem(4);
   background: #ffffff;
@@ -43,4 +43,8 @@
     "cell-1 cell-2 cell-3" auto
     "cell-4 cell-4 cell-5" auto
     /1fr 1fr 2fr;
+
+  * {
+    display: none;
+  }
 }

@@ -1,0 +1,279 @@
+.posts {
+  position: relative;
+  display: flex;
+  gap: rem(24);
+  flex-direction: column;
+
+  h2 {
+    font-size: rem(16);
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(16);
+    flex-direction: column;
+  }
+}
+
+.posts-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(8) rem(12);
+
+  &__link {
+    padding: rem(4) rem(10);
+    white-space: nowrap;
+    font-family: $fontSemibold;
+    color: #96A1AB;
+    text-decoration: underline;
+    transition: all .3s linear;
+
+    &:hover, &.is-active {
+      background: #FFF2E9;
+      color: $colorActive;
+      text-decoration: none;
+    }
+  }
+}
+
+.posts-item {
+  display: flex;
+  gap: rem(24);
+  border: 1px solid #DEE3E6;
+  padding: rem(16);
+  border-radius: rem(4);
+
+  &__photo {
+    width: rem(134);
+    height: rem(134);
+    border: 1px solid #dee3e6;
+    border-radius: rem(4);
+    background: #f5f7f7;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: rem(4);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    gap: rem(12);
+    flex-direction: column;
+  }
+
+  &__top {
+    display: flex;
+    gap: rem(24);
+    justify-content: space-between;
+  }
+
+  &__name {
+    flex: 1;
+    font: rem(20)/normal $fontBold;
+  }
+
+  &__date {
+    flex: 0 max-content;
+    white-space: nowrap;
+    font-size: rem(12);
+    line-height: rem(18);
+    text-align: right;
+    color: #96a1ab;
+  }
+
+  &__info {
+    display: flex;
+    gap: rem(24);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__prices {
+    display: flex;
+    gap: rem(24);
+  }
+
+  &__description {
+    font-size: rem(16);
+    color: #576170;
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.posts-owner {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  font: rem(16)/normal $fontSemibold;
+  transition: color .3s linear;
+
+  &:hover {
+    color: $colorActive;
+    text-decoration: none;
+  }
+
+  &__avatar {
+    width: rem(24);
+    min-width: rem(24);
+    height: rem(24);
+    background: #dee3e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.posts-geo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: rem(4);
+  color: #96a1ab;
+
+  .icon-map-pin {
+    background: #96A1AB;
+    width: rem(9);
+    height: rem(11);
+  }
+
+  &__name {
+    position: absolute;
+    left: rem(16);
+    right: 0;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: rem(16);
+    color: #96A1AB;
+  }
+}
+
+.posts-price {
+  display: flex;
+  flex-direction: column;
+  color: #576170;
+
+  &_light {
+    color: #96A1AB;
+  }
+
+  &__tariff {
+    font: rem(24)/normal $fontBold;
+
+    small {
+      font-size: rem(18);
+      font-weight: bold;
+    }
+  }
+
+  &__unit {
+    font-size: rem(13);
+    color: #666666;
+  }
+}
+
+.posts-buttons {
+  display: flex;
+
+  &__link {
+    position: relative;
+    height: rem(40);
+    padding: 0 rem(15) 0 rem(5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  &__link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -16px;
+    border-top: 40px solid transparent;
+    border-left: 0 solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 0 solid transparent;
+    transition: all .5s linear;
+  }
+
+  &__mail:before {
+    border-right-color: #576170;
+  }
+
+  &__mail:hover:before {
+    border-right-color: $colorActive;
+  }
+
+  &__phone:before {
+    border-right-color: #dee3e6;
+  }
+
+  &__icon {
+    width: rem(16);
+    height: rem(16);
+  }
+
+  &__phone {
+    background: #dee3e6;
+    color: #576170;
+    padding-right: rem(20);
+  }
+
+  &__phone &__icon {
+    background: #576170;
+  }
+
+  &__mail {
+    background: #576170;
+    color: #ffffff;
+    transition: background-color .5s linear;
+
+    &:hover {
+      background: $colorActive;
+    }
+  }
+
+  &__mail &__icon {
+    background: #ffffff;
+  }
+
+  &__anchor {
+    overflow: hidden;
+    max-width: 0;
+    font-size: rem(11);
+    text-transform: uppercase;
+    transition: all .5s linear;
+
+    span {
+      padding: 0 0 0 rem(13);
+    }
+  }
+
+  &__link:hover &__anchor {
+    max-width: rem(100);
+  }
+}

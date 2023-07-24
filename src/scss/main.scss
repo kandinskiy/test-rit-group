@@ -22,12 +22,15 @@ body {
   color: $colorName;
 }
 
-.h1, h2 {
+.h1 {
+  font-size: rem(32);
   text-transform: uppercase;
 }
 
-.h1 {
-  font-size: rem(26);
+.only-mobile {
+  @include media('min', $tablet) {
+    display: none;
+  }
 }
 
 .wrapper {
@@ -42,8 +45,12 @@ body {
   }
 }
 
-.page-content {
-  padding: rem(56) 0 rem(80);
+.section {
+  padding: rem(48) 0;
+
+  @include media('min', $tablet) {
+    padding: rem(64) 0;
+  }
 
   &__inner {
     @include inner;
@@ -53,10 +60,10 @@ body {
       gap: rem(40);
     }
   }
-}
 
-.section {
-  flex: 1;
+  &__content {
+    flex: 1;
+  }
 }
 
 .aside {
@@ -69,7 +76,7 @@ body {
 
   &__inner {
     position: sticky;
-    top: rem(137);
+    top: rem(144);
   }
 }
 
@@ -97,32 +104,91 @@ body {
 
   &__count {
     font: rem(16)/1 $fontBold;
-    color: $colorLinks;
+    color: $colorActive;
   }
 }
 
-.nav-contacts {
+.about-rent {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  padding: rem(48) 0;
+
+  @include media('min', $tablet) {
+    padding: rem(64) 0;
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__name {
+    font: rem(26)/normal $fontBold;
+    color: #3D4554;
+
+    @include media('min', $tablet) {
+      text-align: center;
+      font-size: rem(32);
+      text-transform: uppercase;
+    }
+  }
+
+  &__list {
+    margin-top: rem(48);
+    display: grid;
+    gap: rem(48);
+    grid-template-columns: 1fr;
+
+    @include media('min', $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('min', $desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    display: grid;
+    gap: 0 rem(12);
+    grid-template-columns: rem(32) auto;
+
+    @include media('min', $tablet) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    grid-row: 1/3;
+    margin: 0 auto;
+    background: $colorActive;
+    width: rem(32);
+    height: rem(32);
+
+    @include media('min', $tablet) {
+      width: rem(64);
+      height: rem(64);
+    }
+  }
+
+  &__title {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font: rem(20)/normal $fontBold;
+    color: #3D4554;
+
+    @include media('min', $tablet) {
+      margin-top: rem(24);
+    }
+  }
 
   &__text {
-    font-size: rem(14);
-    line-height: normal;
-  }
-
-  &__link {
-    margin: rem(16) auto 0;
-    display: flex;
-    gap: rem(8);
-    align-items: center;
-    font-family: $fontBold;
+    grid-row: 2/3;
+    grid-column: 2/3;
     font-size: rem(16);
-    color: $colorDefault;
-  }
+    color: #75808F;
 
-  &__button {
-    margin-top: rem(32);
+    @include media('min', $tablet) {
+      margin-top: rem(10);
+    }
   }
 }

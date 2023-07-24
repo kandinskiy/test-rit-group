@@ -56,9 +56,10 @@
 
 @mixin inner {
   margin: 0 auto;
-  padding: 0 rem(24);
+  padding: 0 rem(20);
+  max-width: calc(rem(1200) + rem(24)*2);
 
-  @include media('min', $desktop) {
-    max-width: calc(rem(1200) + rem(24)*2);
+  @include media('min', $tablet) {
+    padding: 0 rem(24);
   }
 }

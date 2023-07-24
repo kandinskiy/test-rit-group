@@ -41,7 +41,7 @@
   }
 
   &_orange {
-    background: $colorLinks;
+    background: $colorActive;
     color: #ffffff;
     border: none;
   }
@@ -58,7 +58,7 @@
   transition: border-color .3s linear;
 
   &:focus {
-    border-color: $colorLinks;
+    border-color: $colorActive;
   }
 
   &:disabled {
@@ -82,7 +82,7 @@
   transition: border-color .3s linear;
 
   &:focus {
-    border-color: $colorLinks;
+    border-color: $colorActive;
   }
 
   option {
