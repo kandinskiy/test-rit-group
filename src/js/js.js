@@ -28,3 +28,11 @@ Array.from(document.querySelectorAll('.js-menu-close')).forEach((link) => {
     menu.classList.remove('nav_open');
   });
 });
+
+Array.from(document.querySelectorAll('.js-blur-click')).forEach((link) => {
+  link.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const block = e.target.closest('.js-blur-click');
+    block.classList.toggle('is-blur');
+  });
+});

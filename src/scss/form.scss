@@ -34,6 +34,21 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  &_pallid {
+    border-color: #96A1AB;
+    color: #96A1AB;
+    transition: all .3s linear;
+
+    &:hover {
+      border-color: $colorDefault;
+      color: $colorDefault;
+
+      .icon-pallid {
+        background: $colorDefault;
+      }
+    }
+  }
+
   &_brown {
     background: $colorDefault;
     color: #ffffff;
@@ -44,6 +59,12 @@
     background: $colorActive;
     color: #ffffff;
     border: none;
+  }
+
+  &__icon {
+    width: rem(16);
+    height: rem(16);
+    transition: all .3s linear;
   }
 }
 

@@ -18,7 +18,7 @@
 
         <div class="header__hamburger icon-default icon-hamburger js-menu-open"></div>
 
-        <a href="/" class="header__logo logo"></a>
+        <a href="/" class="header__logo"></a>
 
         <div class="header__auth auth">
           <a href="" class="auth__link" title="Авторизоваться">
@@ -33,7 +33,7 @@
           </a>
         </div>
 
-        <div class="header__post-add">
+        <div class="header__post-add js-blur-click">
           <button class="header__button button button_brown">Разместить объявление<span class="button__icon icon-white icon-down"></span></button>
           <div class="header__drop-down drop-down drop-down_right">
             <a href="" class="drop-down__link" title="Разместить технику в аренду">
@@ -62,7 +62,7 @@
             <a href="" class="nav__link" title="Поставщики">Поставщики</a>
           </div>
 
-          <div class="nav__item">
+          <div class="nav__item js-blur-click">
             <a href="#" class="nav__link" title="Информация">Информация</a>
             <div class="nav__drop-down drop-down">
               <a href="" class="drop-down__link" title="О площадке">О площадке</a>
@@ -72,7 +72,7 @@
           </div>
 
         </div>
-        <div class="nav__post-add">
+        <div class="nav__post-add js-blur-click">
           <button class="nav__button button button_brown">Разместить объявление<span class="button__icon icon-white icon-down"></span></button>
           <div class="nav__drop-down drop-down drop-down_right">
             <a href="" class="drop-down__link" title="Разместить технику в аренду">
@@ -174,14 +174,274 @@
           <div class="posts__list">
             <div class="posts-item">
               <div class="posts-item__photo">
+
+              </div>
+              <div class="posts-item__content">
+                <div class="posts-item__top">
+                  <div class="posts-item__name">Штукатурные станции ABAC (ABAC Formula 5.508), Абаза</div>
+                  <div class="posts-item__date">
+                    <span>Объявление #86</span>
+                    <span>23.06.23 08:46</span>
+                  </div>
+                </div>
+                <div class="posts-item__info">
+                  <a href="" class="posts-owner" title="ООО «ФасадЭлементСтрой»">
+                    <span class="posts-owner__avatar">
+
+                    </span>
+                    ООО «ФасадЭлементСтрой»
+                  </a>
+                  <div class="posts-geo" title="Амурская область, посёлок городского типа Архара">
+                    <span class="icon-map-pin"></span>
+                    <span class="posts-geo__name">
+                      Амурская область, посёлок городского типа Архара
+                    </span>
+                  </div>
+                </div>
+                <div class="posts-item__description">
+                  Вихретоковый магнитный сепаратор SBM (Германия). Установка используется для отделения и извлечения цветных металлов (медь, латунь, цинк, олово, свинец, AL. немагнитный Ni). Состоит из вибропитателя с предварительным грохотом, основной, сборочный и боковой (для отсева)
+                </div>
+                <div class="posts-item__prices">
+                  <div class="posts-price">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ смена (7 часов)</div>
+                  </div>
+                  <div class="posts-price posts-price_light">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ час</div>
+                  </div>
+                </div>
+              </div>
+              <div class="posts-item__buttons posts-buttons">
+                <a href="" class="posts-buttons__link posts-buttons__phone" title="Позвонить">
+                  <span class="posts-buttons__icon icon-phone"></span>
+                  <span class="posts-buttons__anchor"><span>Позвонить</span></span>
+                </a>
+                <a href="" class="posts-buttons__link posts-buttons__mail" title="Написать">
+                  <span class="posts-buttons__icon icon-mail"></span>
+                  <span class="posts-buttons__anchor"><span>Написать</span></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="posts-item">
+              <div class="posts-item__photo">
                 <img src="/images/img1.png" alt="">
               </div>
               <div class="posts-item__content">
                 <div class="posts-item__top">
                   <div class="posts-item__name">Штукатурные станции ABAC (ABAC Formula 5.508), Абаза</div>
                   <div class="posts-item__date">
-                    Объявление #86<br>
-                    23.06.23 08:46
+                    <span>Объявление #86</span>
+                    <span>23.06.23 08:46</span>
+                  </div>
+                </div>
+                <div class="posts-item__info">
+                  <a href="" class="posts-owner" title="ООО «ФасадЭлементСтрой»">
+                    <span class="posts-owner__avatar">
+                      <img src="/images/img3.jpeg" alt="ООО «ФасадЭлементСтрой»">
+                    </span>
+                    ООО «ФасадЭлементСтрой»
+                  </a>
+                  <div class="posts-geo" title="Амурская область, посёлок городского типа Архара">
+                    <span class="icon-map-pin"></span>
+                    <span class="posts-geo__name">
+                      Амурская область, посёлок городского типа Архара
+                    </span>
+                  </div>
+                </div>
+                <div class="posts-item__description">
+                  Вихретоковый магнитный сепаратор SBM (Германия). Установка используется для отделения и извлечения цветных металлов (медь, латунь, цинк, олово, свинец, AL. немагнитный Ni). Состоит из вибропитателя с предварительным грохотом, основной, сборочный и боковой (для отсева)
+                </div>
+                <div class="posts-item__prices">
+                  <div class="posts-price">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ смена (7 часов)</div>
+                  </div>
+                  <div class="posts-price posts-price_light">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ час</div>
+                  </div>
+                </div>
+              </div>
+              <div class="posts-item__buttons posts-buttons">
+                <a href="" class="posts-buttons__link posts-buttons__phone" title="Позвонить">
+                  <span class="posts-buttons__icon icon-phone"></span>
+                  <span class="posts-buttons__anchor"><span>Позвонить</span></span>
+                </a>
+                <a href="" class="posts-buttons__link posts-buttons__mail" title="Написать">
+                  <span class="posts-buttons__icon icon-mail"></span>
+                  <span class="posts-buttons__anchor"><span>Написать</span></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="posts-item">
+              <div class="posts-item__photo">
+                <img src="/images/img1.png" alt="">
+              </div>
+              <div class="posts-item__content">
+                <div class="posts-item__top">
+                  <div class="posts-item__name">Штукатурные станции ABAC (ABAC Formula 5.508), Абаза</div>
+                  <div class="posts-item__date">
+                    <span>Объявление #86</span>
+                    <span>23.06.23 08:46</span>
+                  </div>
+                </div>
+                <div class="posts-item__info">
+                  <a href="" class="posts-owner" title="ООО «ФасадЭлементСтрой»">
+                    <span class="posts-owner__avatar">
+                      <img src="/images/img3.jpeg" alt="ООО «ФасадЭлементСтрой»">
+                    </span>
+                    ООО «ФасадЭлементСтрой»
+                  </a>
+                  <div class="posts-geo" title="Амурская область, посёлок городского типа Архара">
+                    <span class="icon-map-pin"></span>
+                    <span class="posts-geo__name">
+                      Амурская область, посёлок городского типа Архара
+                    </span>
+                  </div>
+                </div>
+                <div class="posts-item__description">
+                  Вихретоковый магнитный сепаратор SBM (Германия). Установка используется для отделения и извлечения цветных металлов (медь, латунь, цинк, олово, свинец, AL. немагнитный Ni). Состоит из вибропитателя с предварительным грохотом, основной, сборочный и боковой (для отсева)
+                </div>
+                <div class="posts-item__prices">
+                  <div class="posts-price">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ смена (7 часов)</div>
+                  </div>
+                  <div class="posts-price posts-price_light">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ час</div>
+                  </div>
+                </div>
+              </div>
+              <div class="posts-item__buttons posts-buttons">
+                <a href="" class="posts-buttons__link posts-buttons__phone" title="Позвонить">
+                  <span class="posts-buttons__icon icon-phone"></span>
+                  <span class="posts-buttons__anchor"><span>Позвонить</span></span>
+                </a>
+                <a href="" class="posts-buttons__link posts-buttons__mail" title="Написать">
+                  <span class="posts-buttons__icon icon-mail"></span>
+                  <span class="posts-buttons__anchor"><span>Написать</span></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="posts-item">
+              <div class="posts-item__photo">
+                <img src="/images/img1.png" alt="">
+              </div>
+              <div class="posts-item__content">
+                <div class="posts-item__top">
+                  <div class="posts-item__name">Штукатурные станции ABAC (ABAC Formula 5.508), Абаза</div>
+                  <div class="posts-item__date">
+                    <span>Объявление #86</span>
+                    <span>23.06.23 08:46</span>
+                  </div>
+                </div>
+                <div class="posts-item__info">
+                  <a href="" class="posts-owner" title="ООО «ФасадЭлементСтрой»">
+                    <span class="posts-owner__avatar">
+                      <img src="/images/img3.jpeg" alt="ООО «ФасадЭлементСтрой»">
+                    </span>
+                    ООО «ФасадЭлементСтрой»
+                  </a>
+                  <div class="posts-geo" title="Амурская область, посёлок городского типа Архара">
+                    <span class="icon-map-pin"></span>
+                    <span class="posts-geo__name">
+                      Амурская область, посёлок городского типа Архара
+                    </span>
+                  </div>
+                </div>
+                <div class="posts-item__description">
+                  Вихретоковый магнитный сепаратор SBM (Германия). Установка используется для отделения и извлечения цветных металлов (медь, латунь, цинк, олово, свинец, AL. немагнитный Ni). Состоит из вибропитателя с предварительным грохотом, основной, сборочный и боковой (для отсева)
+                </div>
+                <div class="posts-item__prices">
+                  <div class="posts-price">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ смена (7 часов)</div>
+                  </div>
+                  <div class="posts-price posts-price_light">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ час</div>
+                  </div>
+                </div>
+              </div>
+              <div class="posts-item__buttons posts-buttons">
+                <a href="" class="posts-buttons__link posts-buttons__phone" title="Позвонить">
+                  <span class="posts-buttons__icon icon-phone"></span>
+                  <span class="posts-buttons__anchor"><span>Позвонить</span></span>
+                </a>
+                <a href="" class="posts-buttons__link posts-buttons__mail" title="Написать">
+                  <span class="posts-buttons__icon icon-mail"></span>
+                  <span class="posts-buttons__anchor"><span>Написать</span></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="posts-item">
+              <div class="posts-item__photo">
+                <img src="/images/img1.png" alt="">
+              </div>
+              <div class="posts-item__content">
+                <div class="posts-item__top">
+                  <div class="posts-item__name">Штукатурные станции ABAC (ABAC Formula 5.508), Абаза</div>
+                  <div class="posts-item__date">
+                    <span>Объявление #86</span>
+                    <span>23.06.23 08:46</span>
+                  </div>
+                </div>
+                <div class="posts-item__info">
+                  <a href="" class="posts-owner" title="ООО «ФасадЭлементСтрой»">
+                    <span class="posts-owner__avatar">
+                      <img src="/images/img3.jpeg" alt="ООО «ФасадЭлементСтрой»">
+                    </span>
+                    ООО «ФасадЭлементСтрой»
+                  </a>
+                  <div class="posts-geo" title="Амурская область, посёлок городского типа Архара">
+                    <span class="icon-map-pin"></span>
+                    <span class="posts-geo__name">
+                      Амурская область, посёлок городского типа Архара
+                    </span>
+                  </div>
+                </div>
+                <div class="posts-item__description">
+                  Вихретоковый магнитный сепаратор SBM (Германия). Установка используется для отделения и извлечения цветных металлов (медь, латунь, цинк, олово, свинец, AL. немагнитный Ni). Состоит из вибропитателя с предварительным грохотом, основной, сборочный и боковой (для отсева)
+                </div>
+                <div class="posts-item__prices">
+                  <div class="posts-price">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ смена (7 часов)</div>
+                  </div>
+                  <div class="posts-price posts-price_light">
+                    <div class="posts-price__tariff">14 000 <small>₽</small></div>
+                    <div class="posts-price__unit">/ час</div>
+                  </div>
+                </div>
+              </div>
+              <div class="posts-item__buttons posts-buttons">
+                <a href="" class="posts-buttons__link posts-buttons__phone" title="Позвонить">
+                  <span class="posts-buttons__icon icon-phone"></span>
+                  <span class="posts-buttons__anchor"><span>Позвонить</span></span>
+                </a>
+                <a href="" class="posts-buttons__link posts-buttons__mail" title="Написать">
+                  <span class="posts-buttons__icon icon-mail"></span>
+                  <span class="posts-buttons__anchor"><span>Написать</span></span>
+                </a>
+              </div>
+            </div>
+
+            <div class="posts-item">
+              <div class="posts-item__photo">
+                <img src="/images/img1.png" alt="">
+              </div>
+              <div class="posts-item__content">
+                <div class="posts-item__top">
+                  <div class="posts-item__name">Штукатурные станции ABAC (ABAC Formula 5.508), Абаза</div>
+                  <div class="posts-item__date">
+                    <span>Объявление #86</span>
+                    <span>23.06.23 08:46</span>
                   </div>
                 </div>
                 <div class="posts-item__info">
@@ -224,6 +484,12 @@
               </div>
             </div>
           </div>
+
+          <div class="posts__more">
+            <button class="button button_pallid">
+              Прейти в раздел <span class="button__icon icon-pallid icon-arrow-right"></span>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -243,11 +509,70 @@
             </a>
           </div>
 
+          <div class="aside-promo">
+            <div class="aside-promo__title">
+              Популярные марки
+            </div>
+            <div class="aside-promo__list">
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="АВТОДОР">АВТОДОР</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="АМКОДОР">АМКОДОР</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="БЕЛАЗ">БЕЛАЗ</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ВГТЗ">ВГТЗ</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ВТЗ">ВТЗ</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ГАЗ">ГАЗ</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ГАЛИЧАНИН">ГАЛИЧАНИН</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ДОНЭКС">ДОНЭКС</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ЕЛАЗ">ЕЛАЗ</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ЗИЛ">ЗИЛ</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ЗМЗ">ЗМЗ</a>
+              </div>
+              <div class="aside-promo__item">
+                > <a href="" class="aside-promo__link" title="ИВАНОВЕЦ">ИВАНОВЕЦ</a>
+              </div>
+            </div>
+            <a href="" title="Все марки" class="aside-promo__all">
+              <span>Все марки</span> →
+            </a>
+          </div>
+
         </div>
       </aside>
 
     </div>
   </section>
+
+  <div class="about">
+    <div class="about__inner">
+
+      <div class="about__title">О площадке <b>«Стройтех»</b></div>
+
+      <div class="about__content">
+        <p>Общество с ограниченной ответственностью «Реконструкция. Инжиниринг. Технологии.» с 2006 года работает в отрасли промышленного и транспортного строительства Российской Федерации и обеспечивает спецтехникой импортного производства объекты строительства, в том числе гидротехнических сооружений и заводов нефтегазовой отрасли. Одним из направлений деятельности нашей организации, является предоставление в аренду автомобильной и дорожно-строительной техники с персоналом, а также средств малой механизации.</p>
+      </div>
+
+    </div>
+  </div>
 
   <div class="about-rent">
     <div class="about-rent__inner">

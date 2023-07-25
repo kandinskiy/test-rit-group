@@ -66,37 +66,6 @@ body {
   }
 }
 
-.aside {
-  display: none;
-
-  @include media('min', $desktop) {
-    display: block;
-    width: rem(240);
-  }
-
-  &__inner {
-    position: sticky;
-    top: rem(144);
-  }
-}
-
-.aside-banners {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: rem(16);
-
-  &__item {
-    display: block;
-  }
-
-  &__img {
-    @include img-100;
-    border-radius: rem(4);
-    object-fit: contain;
-  }
-}
-
 .section-name {
   display: flex;
   gap: rem(8);
@@ -189,6 +158,52 @@ body {
 
     @include media('min', $tablet) {
       margin-top: rem(10);
+    }
+  }
+}
+
+.about {
+  padding: rem(48) 0;
+  background: url("/images/bg-about.jpg") no-repeat {
+    size: cover;
+  };
+  color: #ffffff;
+
+  @include media('min', $tablet) {
+    padding: rem(64) 0;
+  }
+
+  &__inner {
+    @include inner;
+  }
+
+  &__title {
+    font-family: $fontBold;
+    font-size: rem(24);
+
+    @include media('min', $tablet) {
+      font-size: rem(48);
+    }
+
+    b {
+      font-size: rem(24);
+
+      @include media('min', $tablet) {
+        font-size: rem(64);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: rem(32);
+    font-size: rem(14);
+    line-height: 1.5;
+
+    @include media('min', $tablet) {
+      display: block;
+      columns: 2;
+      gap: rem(80);
+      font-size: rem(16);
     }
   }
 }

@@ -10,6 +10,10 @@
   background: $colorActive;
 }
 
+.icon-pallid {
+  background: #96A1AB;
+}
+
 .icon-avatar {
   width: rem(16);
   height: rem(16);
@@ -91,3 +95,7 @@
   mask-size: contain;
 }
 
+.icon-arrow-right {
+  mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3E%3Cpath stroke='%2396A1AB' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2.667 8h10.666'/%3E%3Cpath stroke='%2396A1AB' stroke-linecap='square' stroke-linejoin='round' stroke-width='2' d='m9.333 4 4 4-4 4'/%3E%3C/svg%3E")  50% 50% no-repeat;
+  mask-size: contain;
+}

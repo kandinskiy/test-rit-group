@@ -83,10 +83,20 @@
     display: flex;
   }
 
-  &__post-add:hover &__drop-down, &__drop-down:hover {
-    opacity: 1;
-    max-height: rem(500);
-    transition: opacity .3s linear 0s,max-height 0s linear 0s;
+  @include media('max', $desktop) {
+    &__post-add.is-blur:hover &__drop-down, &__drop-down:hover {
+      opacity: 1;
+      max-height: rem(500);
+      transition: opacity .3s linear 0s,max-height 0s linear 0s;
+    }
+  }
+
+  @include media('min', $desktop) {
+    &__post-add:hover &__drop-down, &__drop-down:hover {
+      opacity: 1;
+      max-height: rem(500);
+      transition: opacity .3s linear 0s,max-height 0s linear 0s;
+    }
   }
 
   &__contacts {
@@ -125,17 +135,26 @@
       font-size: rem(16);
       color: #ffffff;
     }
+
+    &.is-active {
+      color: $colorActive;
+
+      @include media('min', $tablet) {
+        background: #ffffff;
+        color: $colorDefault;
+      }
+    }
   }
 
-  &__item:hover &__link {
-    background: #ffffff;
-    color: $colorDefault;
+  @include media('max', $desktop) {
+    &__item.is-blur:hover &__link {
+      background: #ffffff;
+      color: $colorDefault;
+    }
   }
 
-  &__link.is-active {
-    color: $colorActive;
-
-    @include media('min', $tablet) {
+  @include media('min', $desktop) {
+    &__item:hover &__link {
       background: #ffffff;
       color: $colorDefault;
     }
@@ -154,13 +173,22 @@
       line-height: normal;
       box-shadow: none;
     }
-
   }
 
-  &__link:hover + &__drop-down, &__drop-down:hover {
-    opacity: 1;
-    max-height: rem(300);
-    transition: opacity .3s linear 0s,max-height 0s linear 0s;
+  @include media('max', $desktop) {
+    .is-blur:hover &__drop-down, &__drop-down:hover {
+      opacity: 1;
+      max-height: rem(300);
+      transition: opacity .3s linear 0s,max-height 0s linear 0s;
+    }
+  }
+
+  @include media('min', $desktop) {
+    &__link:hover + &__drop-down, &__drop-down:hover {
+      opacity: 1;
+      max-height: rem(300);
+      transition: opacity .3s linear 0s,max-height 0s linear 0s;
+    }
   }
 }
 
