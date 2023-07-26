@@ -111,6 +111,10 @@
   }
 }
 
+.form {
+  position: relative;
+}
+
 .form-cell {
   position: relative;
 
@@ -125,4 +129,39 @@
     position: relative;
     margin-top: rem(4);
   }
+}
+
+.form-auth {
+  position: relative;
+  width: rem(420);
+  margin: 0 auto;
+
+  &__block {
+    display: none;
+
+    &.is-active {
+      padding: rem(20);
+      background: #ffffff;
+      display: flex;
+      gap: rem(24);
+      flex-direction: column;
+    }
+  }
+
+  &__save {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.form-filter {
+  padding: rem(24);
+  border-radius: rem(4);
+  background: #ffffff;
+  display: grid;
+  gap: rem(24) rem(12);
+  grid-template:
+    "c1 c2 c3" auto
+    "c4 c4 c5" auto
+    /1fr 1fr 2fr;
 }

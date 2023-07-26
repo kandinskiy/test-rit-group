@@ -142,5 +142,11 @@ module.exports = {
       filename: './index.html',
       minify: false
     }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: PATHS.src + 'auth.html',
+      filename: './auth.html',
+      minify: false
+    }),
   ],
 };

@@ -1,4 +1,4 @@
-.posts {
+.ads {
   position: relative;
   display: flex;
   gap: rem(24);
@@ -25,14 +25,29 @@
   }
 }
 
-.posts-filter-wrapper {
+.ads-filter {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: rem(16);
+  @include scrollbar-design();
 
-}
+  @include media('min', $tablet) {
+    overflow: visible;
+    max-width: none;
+    padding: 0;
+  }
 
-.posts-filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: rem(8) rem(12);
+  &__inner {
+    display: flex;
+    gap: rem(5);
+
+    @include media('min', $tablet) {
+      gap: rem(8) rem(12);
+      flex-wrap: wrap;
+    }
+  }
 
   &__link {
     padding: rem(4) rem(10);
@@ -50,7 +65,7 @@
   }
 }
 
-.posts-item {
+.offer {
   position: relative;
   display: flex;
   gap: rem(24);
@@ -180,7 +195,8 @@
   }
 }
 
-.posts-owner {
+
+.ads-user {
   display: flex;
   align-items: center;
   gap: rem(8);
@@ -227,7 +243,7 @@
   }
 }
 
-.posts-geo {
+.ads-geo {
   position: relative;
   display: flex;
   align-items: baseline;
@@ -264,7 +280,7 @@
   }
 }
 
-.posts-price {
+.ads-price {
   display: flex;
   flex-direction: column;
   color: #576170;
@@ -288,7 +304,7 @@
   }
 }
 
-.posts-buttons {
+.ads-buttons {
   display: flex;
 
   &__link {

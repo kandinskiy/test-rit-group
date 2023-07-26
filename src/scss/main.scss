@@ -10,11 +10,12 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   min-height: 100vh;
   min-height: -webkit-fill-available;
+  background: #EFF2F2;
   font: rem(16)/normal $fontRegular;
   color: $colorDefault;
-  overflow-x: hidden;
 }
 
 .h1, .h2, .h3 {
@@ -31,6 +32,14 @@ body {
   @include media('min', $tablet) {
     display: none;
   }
+}
+
+.bg-white {
+  background: #ffffff;
+}
+
+.bg-gray {
+  background: #f5f7f7;
 }
 
 .wrapper {
@@ -80,6 +89,8 @@ body {
 .about-rent {
   position: relative;
   padding: rem(48) 0;
+  border-top: 1px solid #dee3e6;
+  background: #ffffff;
 
   @include media('min', $tablet) {
     padding: rem(64) 0;
@@ -103,11 +114,12 @@ body {
   &__list {
     margin-top: rem(48);
     display: grid;
-    gap: rem(48);
+    gap: rem(32);
     grid-template-columns: 1fr;
 
     @include media('min', $tablet) {
       grid-template-columns: repeat(2, 1fr);
+      gap: rem(48);
     }
 
     @include media('min', $desktop) {
@@ -153,12 +165,9 @@ body {
   &__text {
     grid-row: 2/3;
     grid-column: 2/3;
+    margin-top: rem(10);
     font-size: rem(16);
     color: #75808F;
-
-    @include media('min', $tablet) {
-      margin-top: rem(10);
-    }
   }
 }
 

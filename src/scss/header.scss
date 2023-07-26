@@ -133,11 +133,16 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 85%;
-      height: 80%;
+      width: 90%;
+      height: 90%;
       transform: translate(-50%,-50%);
       background: #576170;
       @extend .icon-avatar;
+
+      @include media('min', $tablet) {
+        width: 65%;
+        height: 65%;
+      }
     }
 
     img {
