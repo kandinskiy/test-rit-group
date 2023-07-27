@@ -20,6 +20,8 @@
 }
 
 .button {
+  position: relative;
+  width: 100%;
   height: rem(44);
   padding: 1px rem(16) 0;
   display: flex;
@@ -69,13 +71,15 @@
 }
 
 .input {
+  position: relative;
   display: block;
   width: 100%;
   height: rem(46);
   padding: 0 rem(16);
-  border: 1px solid #DEE3E6;
+  border: 1px solid #EFF2F2;
   border-radius: rem(4);
-  background: #ffffff;
+  background: #EFF2F2;
+  color: #576170;
   transition: border-color .3s linear;
 
   &:focus {
@@ -92,15 +96,56 @@
   }
 }
 
+.checkbox {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  gap: rem(10);
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    left: rem(-5);
+    top: rem(-5);
+    width: rem(3);
+    height: rem(3);
+  }
+
+  &__block {
+    flex: 0 rem(18);
+    position: relative;
+    width: rem(18);
+    height: rem(18);
+    border: 1px solid #EFF2F2;
+    border-radius: rem(4);
+    background: #EFF2F2;
+  }
+
+  &__input:checked + &__block {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none'%3E%3Cpath fill='%23FE7E25' fill-rule='evenodd' d='M16 0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2ZM7 14 2 9.192l1.4-1.346L7 11.308 14.6 4 16 5.346 7 14Z' clip-rule='evenodd'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    background-size: contain;
+  }
+
+  &__text {
+    flex: 1;
+    color: #96a1ab;
+
+    &_mini {
+      font-size: rem(12);
+    }
+  }
+}
+
 .select {
   display: block;
   width: 100%;
   height: rem(46);
   padding: 0 rem(16);
-  border: 1px solid #dee3e6;
+  border: 1px solid #EFF2F2;
   border-radius: rem(4);
-  background: #ffffff;
+  background: #EFF2F2;
   transition: border-color .3s linear;
+  color: #576170;
 
   &:focus {
     border-color: $colorActive;
@@ -108,11 +153,23 @@
 
   option {
     padding: rem(11) rem(24);
+    color: #576170;
   }
 }
 
 .form {
   position: relative;
+
+  &__link {
+    text-decoration: underline;
+    color: #576170;
+    transition: color .3s linear;
+
+    &:hover {
+      color: $colorActive;
+      text-decoration: none;
+    }
+  }
 }
 
 .form-cell {
@@ -129,28 +186,130 @@
     position: relative;
     margin-top: rem(4);
   }
+
+  &__icon {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: rem(16);
+      transform: translateY(-50%);
+      z-index: 3;
+      width: rem(16);
+      height: rem(16);
+      background: #576170;
+    }
+
+    .input {
+      padding-left: rem(42);
+    }
+  }
+
+  &__icon-mail {
+    &:after {
+      @extend .icon-mail;
+    }
+  }
+
+  &__icon-lock {
+    &:after {
+      @extend .icon-lock;
+    }
+  }
+
+  &__icon-avatar {
+    &:after {
+      @extend .icon-avatar;
+    }
+  }
+
+  &__icon-phone {
+    &:after {
+      @extend .icon-phone;
+    }
+  }
 }
 
 .form-auth {
   position: relative;
-  width: rem(420);
-  margin: 0 auto;
+  border-radius: rem(4);
+  box-shadow: 0 0 rem(10) rem(5) #eee;
 
-  &__block {
-    display: none;
+  @include media('min', $tablet) {
+    width: rem(420);
+    margin: 0 auto;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__tab {
+    flex: 0 1 50%;
+    position: relative;
+    height: rem(60);
+    background: rgba(0,0,0,.32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(4) 0 0 0;
+    font-family: $fontBold;
+    font-size: rem(12);
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include media('min', $tablet) {
+      font-size: rem(16);
+    }
+
+    & + & {
+      border-radius: 0 rem(4) 0 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &.is-active {
-      padding: rem(20);
       background: #ffffff;
-      display: flex;
-      gap: rem(24);
-      flex-direction: column;
+      color: #2e2b2e;
+      cursor: default;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
+  }
+
+  &__form {
+    display: block;
+
+    & + & {
+      display: none;
+    }
+  }
+
+  &__block {
+    padding: rem(40) rem(20) rem(20);
+    border-radius: 0 0 rem(4) rem(4);
+    background: #ffffff;
+    display: flex;
+    gap: rem(24);
+    flex-direction: column;
   }
 
   &__save {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__another {
+    padding: rem(10);
+    text-align: center;
+    color: #96a1ab;
   }
 }
 

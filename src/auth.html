@@ -12,23 +12,21 @@
 <div class="wrapper">
 
   <div class="wrapper__sticky">
-
     <header class="header">
       <div class="header__inner">
-
         <div class="header__hamburger icon-default icon-hamburger js-menu-open"></div>
 
         <a href="/" class="header__logo"></a>
 
         <div class="header__auth auth">
-          <a href="auth.html" class="auth__link" title="Авторизоваться">
+          <a href="auth.html#auth" class="auth__link" title="Авторизоваться">
             <span class="auth__icon">
               <!-- Аватарка пользователя-->
             </span>
             <span class="auth__link-text">Вход</span>
           </a>
           <span class="auth__dot"> • </span>
-          <a href="" class="auth__link" title="Зарегистрироваться">
+          <a href="auth.html#reg" class="auth__link" title="Зарегистрироваться">
             <span class="auth__link-text">Регистрация</span>
           </a>
         </div>
@@ -47,7 +45,6 @@
 
       </div>
     </header>
-
     <div id="nav" class="nav-wrapper">
       <nav class="nav">
         <div class="nav__close js-menu-close">+</div>
@@ -99,52 +96,111 @@
         </div>
       </nav>
     </div>
-
   </div>
 
   <section class="section">
     <div class="section__inner">
       <div class="section__content">
 
-        <div class="form form-auth">
+        <!--Форма авторизации/регистрации-->
+        <div id="form-auth" class="form form-auth">
           <div class="form-auth__tabs">
-            <a href="" title="Вход" class="form-auth__tab">Вход</a>
-            <a href="" title="Регистрация" class="form-auth__tab">Регистрация</a>
+            <span title="Вход" class="form-auth__tab js-auth-tab" data-index="0" data-hash="auth">Вход</span>
+            <span title="Регистрация" class="form-auth__tab js-auth-tab" data-index="1" data-hash="reg">Регистрация</span>
           </div>
 
-          <div id="form-auth" class="form-auth__block is-active">
-            <div class="form-cell">
-              <div class="form-cell__name">
-                E-mail
+          <form class="form-auth__form" name="authorization">
+            <div class="form-auth__block">
+              <div class="form-cell">
+                <div class="form-cell__name">
+                  E-mail
+                </div>
+                <div class="form-cell__element form-cell__icon form-cell__icon-mail">
+                  <input type="text" name="auth-login" class="input" placeholder="Введите ваш E-mail">
+                </div>
               </div>
-              <div class="form-cell__element">
-                <input type="text" name="auth-login" class="input">
+              <div class="form-cell">
+                <div class="form-cell__name">
+                  Пароль
+                </div>
+                <div class="form-cell__element form-cell__icon form-cell__icon-lock">
+                  <input type="password" name="auth-password" class="input" placeholder="Введите ваш пароль">
+                </div>
+              </div>
+              <div class="form-auth__save">
+                <label class="checkbox">
+                  <input type="checkbox" name="" value="" class="checkbox__input">
+                  <span class="checkbox__block"></span>
+                  Запомнить
+                </label>
+                <a href="" class="form__link">Забыли пароль?</a>
+              </div>
+              <div class="form-auth__button">
+                <button type="submit" class="button button_orange" title="Войти">Войти</button>
+              </div>
+              <div class="form-auth__another">
+                Нет аккаунта? <a href="/user/registration.html" class="form__link" title="Зарегистрироваться"><b>Зарегистрируйтесь</b></a>
               </div>
             </div>
-            <div class="form-cell">
-              <div class="form-cell__name">
-                Пароль
-              </div>
-              <div class="form-cell__element">
-                <input type="password" name="auth-password" class="input">
-              </div>
-            </div>
-            <div class="form-auth__save">
-              <div>Запомнить</div>
-              <a href="">Забыли пароль?</a>
-            </div>
-            <div class="form-auth__another">
-              Нет аккаунта? <a href="" title="Зарегистрироваться">Зарегистрируйтесь</a>
-            </div>
-            <div class="form-auth__button">
-              <button type="submit" class="button">Зарегистрироваться</button>
-            </div>
-          </div>
+          </form>
 
-          <div id="form-reg" class="form-auth__block">
-
-          </div>
-
+          <form class="form-auth__form" name="registration">
+            <div class="form-auth__block">
+              <div class="form-cell">
+                <div class="form-cell__name">
+                  ФИО *
+                </div>
+                <div class="form-cell__element form-cell__icon form-cell__icon-avatar">
+                  <input type="text" name="" class="input" placeholder="Введите ФИО" required>
+                </div>
+              </div>
+              <div class="form-cell">
+                <div class="form-cell__name">
+                  ВАШ ТЕЛЕФОН
+                </div>
+                <div class="form-cell__element form-cell__icon form-cell__icon-phone">
+                  <input type="text" name="" class="input" placeholder="Ваш номер телефона">
+                </div>
+              </div>
+              <div class="form-cell">
+                <div class="form-cell__name">
+                  E-MAIL *
+                </div>
+                <div class="form-cell__element form-cell__icon form-cell__icon-mail">
+                  <input type="email" name="" class="input" placeholder="Введите ваш E-mail" required>
+                </div>
+              </div>
+              <div class="form-cell">
+                <div class="form-cell__name">
+                  ПРИДУМАЙТЕ ПАРОЛЬ *
+                </div>
+                <div class="form-cell__element form-cell__icon form-cell__icon-lock">
+                  <input type="email" name="" class="input" placeholder="Придумайте ваш пароль" required>
+                </div>
+              </div>
+              <div class="form-cell">
+                <div class="form-cell__name">
+                  ПОВТОРИТЕ ПАРОЛЬ *
+                </div>
+                <div class="form-cell__element form-cell__icon form-cell__icon-lock">
+                  <input type="email" name="" class="input" placeholder="Повторите ваш пароль" required>
+                </div>
+              </div>
+              <label class="checkbox">
+                <input type="checkbox" name="" value="" class="checkbox__input">
+                <span class="checkbox__block"></span>
+                <span class="checkbox__text checkbox__text_mini">
+                    Я принимаю условия пользовательского соглашения и политики конфиденциальности и даю согласие на <a href="" class="form__link">обработку персональных данных</a>
+                  </span>
+              </label>
+              <div class="form-auth__button">
+                <button type="submit" class="button button_orange" title="Войти">Войти</button>
+              </div>
+              <div class="form-auth__another">
+                Уже есть аккаунт? <a href="/user/login.html" class="form__link" title="Войти"><b>Войти</b></a>
+              </div>
+            </div>
+          </form>
 
         </div>
 

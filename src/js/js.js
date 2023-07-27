@@ -36,3 +36,39 @@ Array.from(document.querySelectorAll('.js-blur-click')).forEach((link) => {
     block.classList.toggle('is-blur');
   });
 });
+
+Array.from(document.querySelectorAll('#form-auth')).forEach((e) => {
+  let formActivate = (index=0) => {
+    Array.from(e.querySelectorAll('.js-auth-tab')).forEach((el) => {
+      el.classList.remove('is-active');
+    });
+    e.querySelectorAll('.js-auth-tab')[index].classList.add('is-active');
+    Array.from(e.querySelectorAll('form')).forEach((el) => {
+      el.style.display = 'none';
+    });
+    e.querySelectorAll('form')[index].style.display = "block";
+  };
+
+  let analysis = () => {
+    let hash = document.location.hash.slice(1);
+    let tab = (hash) ? e.querySelector('.js-auth-tab[data-hash='+hash+']') : null;
+    let index = (hash && tab) ?
+      e.querySelector('.js-auth-tab[data-hash='+hash+']').dataset.index : 0;
+    formActivate(index);
+  };
+
+  Array.from(e.querySelectorAll('.js-auth-tab')).forEach((link) => {
+    link.addEventListener('click', (e) => {
+      let tab = e.target.closest('.js-auth-tab')
+      let hash = tab.dataset.hash;
+      window.location.hash = (hash) ? '#' + hash : '';
+    });
+  });
+
+  analysis();
+
+  window.addEventListener('hashchange', () => {
+    analysis();
+  });
+
+});
